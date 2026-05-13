@@ -2709,6 +2709,104 @@ footer {
   border-color: var(--blue);
 }
 
+/* ---- File upload field ---- */
+.upload-section { margin-top: 8px; }
+.upload-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.upload-opt {
+  background: var(--blue-soft);
+  color: var(--blue-deep);
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  letter-spacing: 0.12em;
+}
+.upload-hint {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.upload-drop {
+  display: block;
+  cursor: pointer;
+  border: 2px dashed var(--blue-line);
+  border-radius: 14px;
+  background: var(--blue-tint);
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+.upload-drop:hover, .upload-drop.drag-over {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+}
+.upload-drop input[type="file"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0; pointer-events: none;
+}
+.upload-drop-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 24px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.upload-drop-text { font-size: 14px; }
+.upload-drop-text strong { color: var(--blue); }
+.upload-drop-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.upload-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.upload-file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--blue-line);
+  font-size: 13px;
+  color: var(--ink);
+}
+.upload-file-item svg { color: var(--blue); flex-shrink: 0; }
+.upload-file-size {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.1em;
+}
+.upload-file-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-muted);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+.upload-file-remove:hover { color: #c0392b; }
+
 /* ---- Patient Forms section ---- */
 .forms-section {
   padding: 80px 0;
@@ -5582,7 +5680,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         </div>
       </div>
 
-      <form name="book-online" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="book-online" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="book-online">
         <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-fields">
@@ -5626,6 +5724,24 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
           <div class="field full">
             <label>Additional notes (optional)</label>
             <textarea name="notes" placeholder="Anything we should know ahead of your visit?"></textarea>
+          </div>
+          <div class="full">
+            <div class="upload-section">
+              <div class="upload-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                Upload completed patient forms <span class="upload-opt">Optional</span>
+              </div>
+              <p class="upload-hint">New patient? Attach your completed registration form here and we'll have it ready before your visit. Accepts PDF, JPG, or PNG (max 10MB per file).</p>
+              <label class="upload-drop" id="upload-drop">
+                <input type="file" name="patient-forms" accept=".pdf,.jpg,.jpeg,.png" multiple id="upload-input">
+                <div class="upload-drop-inner" id="upload-drop-inner">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span class="upload-drop-text">Drag & drop files here, or <strong>click to browse</strong></span>
+                  <span class="upload-drop-sub">PDF · JPG · PNG — max 10MB each</span>
+                </div>
+                <div class="upload-file-list" id="upload-file-list"></div>
+              </label>
+            </div>
           </div>
           <div class="full" style="margin-top: 10px;">
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 13px; border: none;">
@@ -6310,6 +6426,88 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
   // Close menu when any link inside is clicked
   mobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', closeMobileMenu);
+  });
+})();
+
+// ---- File upload drag-and-drop ----
+(function(){
+  var drop = document.getElementById('upload-drop');
+  var input = document.getElementById('upload-input');
+  var fileList = document.getElementById('upload-file-list');
+  var dropInner = document.getElementById('upload-drop-inner');
+  if (!drop || !input) return;
+
+  var selectedFiles = [];
+
+  function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function renderFiles() {
+    fileList.innerHTML = '';
+    if (selectedFiles.length === 0) {
+      dropInner.style.display = 'flex';
+      return;
+    }
+    dropInner.style.display = 'none';
+    selectedFiles.forEach(function(f, i) {
+      var item = document.createElement('div');
+      item.className = 'upload-file-item';
+      item.innerHTML =
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>' +
+        '<span>' + f.name + '</span>' +
+        '<span class="upload-file-size">' + formatSize(f.size) + '</span>' +
+        '<button type="button" class="upload-file-remove" data-idx="' + i + '" aria-label="Remove file">' +
+          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>';
+      fileList.appendChild(item);
+    });
+    fileList.querySelectorAll('.upload-file-remove').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var idx = parseInt(btn.getAttribute('data-idx'));
+        selectedFiles.splice(idx, 1);
+        syncInput();
+        renderFiles();
+      });
+    });
+  }
+
+  function syncInput() {
+    var dt = new DataTransfer();
+    selectedFiles.forEach(function(f) { dt.items.add(f); });
+    input.files = dt.files;
+  }
+
+  function addFiles(files) {
+    Array.from(files).forEach(function(f) {
+      if (f.size <= 10 * 1024 * 1024) selectedFiles.push(f);
+    });
+    syncInput();
+    renderFiles();
+  }
+
+  input.addEventListener('change', function() { addFiles(input.files); });
+
+  drop.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    drop.classList.add('drag-over');
+  });
+  drop.addEventListener('dragleave', function() { drop.classList.remove('drag-over'); });
+  drop.addEventListener('drop', function(e) {
+    e.preventDefault();
+    drop.classList.remove('drag-over');
+    addFiles(e.dataTransfer.files);
+  });
+  drop.addEventListener('click', function(e) {
+    if (e.target.closest('.upload-file-remove')) return;
+    input.click();
+  });
+  drop.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); }
   });
 })();
 </script>
