@@ -2656,6 +2656,59 @@ footer {
 .neighborhood-band h2 em { font-style: italic; color: var(--accent); }
 .neighborhood-band p { color: rgba(255, 255, 255, 0.75); font-size: 17px; line-height: 1.65; margin-bottom: 28px; }
 
+/* ---- New patient notice (inside booking form) ---- */
+.new-patient-notice {
+  background: var(--blue-tint);
+  border: 1px solid var(--blue-line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+.np-badge {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.new-patient-notice p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.np-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.np-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+  background: var(--white);
+  border: 1px solid var(--blue-line);
+  padding: 7px 12px;
+  border-radius: 8px;
+  transition: all 0.15s;
+}
+.np-links a:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue);
+}
+
 /* ---- Patient Forms section ---- */
 .forms-section {
   padding: 80px 0;
@@ -3165,8 +3218,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <span>Four Dallas-area locations</span>
     </div>
     <div class="top-right">
-      <span>Mon–Sat · Open Today</span>
-      <a href="tel:+19722889747">(972) 288-9747</a>
+      <span>Mon–Fri · Open Today</span>
     </div>
   </div>
 </div>
@@ -3207,7 +3259,6 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <li><a href="#page-contact" data-nav="contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+19722889747" class="nav-phone">(972) 288-9747</a>
       <a href="#page-book-online" class="nav-cta">Book Online →</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -5512,6 +5563,25 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <h2>Request an <em>appointment.</em></h2>
       <p class="sub">Fill out the form and a team member will reach out to confirm your time.</p>
 
+      <div class="new-patient-notice fade-in">
+        <div class="np-badge">New patient?</div>
+        <p>Download and complete your registration form before your visit — it saves time at check-in.</p>
+        <div class="np-links">
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Registration (English)
+          </a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Registration (Spanish)
+          </a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Medical Release
+          </a>
+        </div>
+      </div>
+
       <form name="book-online" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="book-online">
         <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -5593,8 +5663,21 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
         </div>
         <h3>What to <em>bring</em></h3>
-        <p>Photo ID, insurance card, and a list of current medications. If you're a new patient, arrive 15 minutes early to complete paperwork.</p>
-        <span class="arrow-link">View insurance we accept ↗</span>
+        <p>Photo ID, insurance card, and a list of current medications. <strong>New patient?</strong> Download and complete your registration form before you arrive — saves time at check-in.</p>
+        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="arrow-link">Download registration form ↓</a>
+      </div>
+
+      <div class="side-card fade-in" style="border: 1px solid var(--blue-line); background: var(--blue-tint);">
+        <div class="icon" style="background: var(--blue-soft); color: var(--blue-deep);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h3>New patient <em>forms</em></h3>
+        <p>Download and fill these out before your first visit. You can also email them to <a href="mailto:aymancare2019@gmail.com" style="color:var(--blue);">aymancare2019@gmail.com</a>.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="arrow-link">Patient Registration (English) ↓</a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener" class="arrow-link">Patient Registration (Spanish) ↓</a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener" class="arrow-link">Medical Release Form ↓</a>
+        </div>
       </div>
     </div>
   </div>
