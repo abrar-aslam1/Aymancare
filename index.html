@@ -3820,11 +3820,11 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         <div class="field full">
           <label for="loc">Location</label>
           <select id="loc" name="location">
-            <option>Choose a location</option>
-            <option>Dallas</option>
-            <option>North Richland Hills</option>
-            <option>Mesquite</option>
-            <option>Valley Ranch</option>
+            <option value="">Choose a location</option>
+            <option value="Dallas">Dallas</option>
+            <option value="North Richland Hills">North Richland Hills</option>
+            <option value="Mesquite">Mesquite</option>
+            <option value="Valley Ranch">Valley Ranch</option>
           </select>
         </div>
         <div class="field full">
@@ -3889,7 +3889,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <p>Same-day appointments often available. Walk-ins welcome — no appointment required for urgent care.</p>
 
       <h3><em>01.</em> Choose a service</h3>
-      <div class="opt-grid">
+      <div class="opt-grid" id="booking-service-grid">
         <div class="opt selected"><h4>Primary care</h4><p>Annual exam, checkup, chronic care</p></div>
         <div class="opt"><h4>Walk-in urgent</h4><p>Same-day, no appointment</p></div>
         <div class="opt"><h4>Pediatric visit</h4><p>Child checkup or sick visit</p></div>
@@ -3897,7 +3897,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
 
       <h3><em>02.</em> Choose a location</h3>
-      <div class="opt-grid">
+      <div class="opt-grid" id="booking-location-grid">
         <div class="opt selected"><h4>Dallas</h4><p>N Buckner Blvd</p></div>
         <div class="opt"><h4>North Richland Hills</h4><p>Bedford Euless Rd</p></div>
         <div class="opt"><h4>Mesquite</h4><p>I-30 E</p></div>
@@ -3905,7 +3905,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
 
       <h3><em>03.</em> Pick a time <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-left: 8px; font-weight: 500;">Today</span></h3>
-      <div class="time-grid">
+      <div class="time-grid" id="booking-time-grid">
         <div class="time">9:00 AM</div>
         <div class="time">9:30 AM</div>
         <div class="time">10:15 AM</div>
@@ -3935,11 +3935,11 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
 
     <div class="summary-card fade-in">
       <div class="sub">✦ Your appointment</div>
-      <h3><em>Primary</em> care visit</h3>
+      <h3 id="sum-service"><em>Primary</em> care visit</h3>
 
       <div class="sum-row">
         <span class="k">Location</span>
-        <span class="v">Dallas</span>
+        <span class="v" id="sum-location">Dallas</span>
       </div>
       <div class="sum-row">
         <span class="k">Date</span>
@@ -3947,7 +3947,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
       <div class="sum-row">
         <span class="k">Time</span>
-        <span class="v">2:15 PM</span>
+        <span class="v" id="sum-time">2:15 PM</span>
       </div>
       <div class="sum-row">
         <span class="k">Physician</span>
@@ -5703,10 +5703,10 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
           <div class="field full">
             <label>Preferred location</label>
             <select name="location">
-              <option>Dallas — N Buckner Blvd</option>
-              <option>North Richland Hills — Bedford Euless Rd</option>
-              <option>Mesquite — I-30 E</option>
-              <option>Valley Ranch — MacArthur Blvd</option>
+              <option value="Dallas">Dallas — N Buckner Blvd</option>
+              <option value="North Richland Hills">North Richland Hills — Bedford Euless Rd</option>
+              <option value="Mesquite">Mesquite — I-30 E</option>
+              <option value="Valley Ranch">Valley Ranch — MacArthur Blvd</option>
             </select>
           </div>
           <div class="field full">
@@ -6427,6 +6427,52 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
   mobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', closeMobileMenu);
   });
+})();
+
+// ---- Booking widget: wire opt tiles to hidden form fields + summary card ----
+(function(){
+  var serviceGrid   = document.getElementById('booking-service-grid');
+  var locationGrid  = document.getElementById('booking-location-grid');
+  var timeGrid      = document.getElementById('booking-time-grid');
+  var fService      = document.querySelector('form[name="booking"] input[name="service"]');
+  var fLocation     = document.querySelector('form[name="booking"] input[name="location"]');
+  var fTime         = document.querySelector('form[name="booking"] input[name="time"]');
+  var sumService    = document.getElementById('sum-service');
+  var sumLocation   = document.getElementById('sum-location');
+  var sumTime       = document.getElementById('sum-time');
+
+  function wireGrid(grid, hiddenField, onSelect) {
+    if (!grid) return;
+    grid.querySelectorAll('.opt').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        grid.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        var val = opt.querySelector('h4').textContent.trim();
+        if (hiddenField) hiddenField.value = val;
+        if (onSelect) onSelect(val);
+      });
+    });
+  }
+
+  wireGrid(serviceGrid, fService, function(val) {
+    if (sumService) sumService.innerHTML = '<em>' + val + '</em>';
+  });
+
+  wireGrid(locationGrid, fLocation, function(val) {
+    if (sumLocation) sumLocation.textContent = val;
+  });
+
+  if (timeGrid) {
+    timeGrid.querySelectorAll('.time').forEach(function(t) {
+      t.addEventListener('click', function() {
+        timeGrid.querySelectorAll('.time').forEach(function(x){ x.classList.remove('selected'); });
+        t.classList.add('selected');
+        var val = t.textContent.trim();
+        if (fTime) fTime.value = val;
+        if (sumTime) sumTime.textContent = val;
+      });
+    });
+  }
 })();
 
 // ---- File upload drag-and-drop ----
