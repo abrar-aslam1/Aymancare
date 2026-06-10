@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Request Received | AymanCare"
+  description="Thank you — your appointment request has been received. A team member will confirm within one business hour."
+  noindex={true}
+>
+<section class="page-hero" style="text-align: center; align-items: center;">
+  <div class="breadcrumbs fade-in" style="justify-content: center;">
+    <a href="/">Home</a><span class="sep">✦</span><span>Thank You</span>
+  </div>
+  <div style="width: 72px; height: 72px; background: var(--blue-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;" class="fade-in">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+  </div>
+  <h1 class="page-title fade-in">Thank <em>you.</em></h1>
+  <p class="page-subtitle fade-in" style="max-width: 520px; margin: 0 auto;">Thank you for contacting us — we'll get back to you as soon as possible. A team member will reach out to confirm your appointment, typically within one business hour.</p>
+  <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 36px;" class="fade-in">
+    <a href="/" class="btn btn-primary">Back to home →</a>
+    <a href="/locations/" class="btn btn-outline">Find a location ↗</a>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div class="three-col" style="max-width: 900px; margin: 0 auto;">
+    <div class="mini-card fade-in" style="text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 12px;">📞</div>
+      <h4>Prefer to <em>call?</em></h4>
+      <p>Reach our team directly — <a href="/contact/" style="color: var(--blue);">find your nearest clinic here</a>. We're available Mon–Fri.</p>
+    </div>
+    <div class="mini-card fade-in" style="text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 12px;">🚶</div>
+      <h4>Walk-ins <em>welcome</em></h4>
+      <p>No appointment needed for urgent care. Just show up at any of our four Dallas-area locations.</p>
+    </div>
+    <div class="mini-card fade-in" style="text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 12px;">📋</div>
+      <h4>New <em>patient?</em></h4>
+      <p>Download and complete your <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" style="color: var(--blue);">registration form</a> before your first visit.</p>
+    </div>
+  </div>
+</section>
+</Base>

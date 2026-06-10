@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Notice of Privacy Practices | AymanCare"
+  description="How AymanCare uses and protects your medical information, and your rights under HIPAA."
+>
+  <Fragment slot="head">
+  <script type="application/ld+json" is:inline set:html={"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://aymancare.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Privacy\",\"item\":\"https://aymancare.com/privacy/\"}]}"} />
+  </Fragment>
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="/">Home</a><span class="sep">✦</span><span>Privacy Practices</span>
+  </div>
+  <h1 class="page-title fade-in">Notice of Privacy<br><em>Practices.</em></h1>
+  <p class="page-subtitle fade-in">This notice describes how medical information about you may be used and disclosed, and how you can access this information. Please review it carefully.</p>
+</section>
+
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="info-card fade-in" style="margin-bottom: 32px; background: var(--blue-tint); border-color: var(--blue-line);">
+      <div class="l">✦ Full document</div>
+      <h4>Download the complete <em>HIPAA Notice</em></h4>
+      <p style="margin: 12px 0 20px;">Our full Notice of Privacy Practices is available as a document. It covers how we collect, use, and protect your health information in accordance with HIPAA.</p>
+      <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/THIS%20NOTICE%20DESCRIBES%20HOW%20MEDICAL%20INFORMATION%20ABOUT%20YOU%20MAY%20BE%20USED%20AND%20DISCLOSED%20AND%20HOW%20YOU%20CAN%20ACCESS%20THIS%20INFORMATION.docx" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        Download Privacy Notice (.docx)
+      </a>
+    </div>
+
+    <div style="font-size: 15px; color: var(--ink-soft); line-height: 1.75;" class="fade-in">
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin: 36px 0 12px;">Our Responsibilities</h3>
+      <p>AymanCare is required by law to maintain the privacy of your protected health information, to provide you with notice of our legal duties and privacy practices, and to notify you following a breach of unsecured protected health information.</p>
+
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin: 36px 0 12px;">How We May Use Your Information</h3>
+      <p>We may use and disclose your health information for the purposes of treatment, payment, and healthcare operations. This includes sharing information with other providers involved in your care, processing insurance claims, and improving our services.</p>
+
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin: 36px 0 12px;">Your Rights</h3>
+      <p>You have the right to request a copy of your health information, request corrections, request restrictions on how your information is used, and request an accounting of disclosures. To exercise any of these rights, please contact our office.</p>
+
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin: 36px 0 12px;">Contact Us</h3>
+      <p>If you have questions about this notice or your privacy rights, please contact us at any of our <a href="/contact/" style="color: var(--blue);">four Dallas-area locations</a>.</p>
+
+      <p style="margin-top: 40px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted);">For the complete and legally binding Notice of Privacy Practices, please download the full document above.</p>
+    </div>
+  </div>
+</section>
+</Base>

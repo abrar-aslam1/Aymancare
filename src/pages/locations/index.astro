@@ -1,0 +1,146 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Our Locations — 4 Clinics Across Dallas–Fort Worth | AymanCare"
+  description="Find your nearest AymanCare clinic: Dallas (N Buckner Blvd), North Richland Hills, Mesquite and Valley Ranch in Irving. Walk-ins welcome at every location."
+>
+  <Fragment slot="head">
+  <script type="application/ld+json" is:inline set:html={"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://aymancare.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Locations\",\"item\":\"https://aymancare.com/locations/\"}]}"} />
+  </Fragment>
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="/">Home</a><span class="sep">✦</span><span>Locations</span>
+  </div>
+  <h1 class="page-title fade-in">Four neighborhoods.<br>One <em>standard.</em></h1>
+  <p class="page-subtitle fade-in">Find the AymanCare nearest you. Every clinic offers the same board-certified care, walk-ins welcome, and most insurances accepted.</p>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="loc-main">
+    <div class="loc-list-col">
+      <a href="/locations/dallas/" class="loc-big-card fade-in">
+        <div class="pin">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="city"><em>Dallas</em></div>
+          <div class="addr">N Buckner Blvd, Dallas, TX 75218</div>
+          <div class="chip-row">
+            <span class="pill">Flagship</span>
+            <span class="pill pill-accent">Walk-ins</span>
+          </div>
+        </div>
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blue);"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="/locations/north-richland-hills/" class="loc-big-card fade-in">
+        <div class="pin">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="city">North <em>Richland Hills</em></div>
+          <div class="addr">8208 Bedford Euless Rd, North Richland Hills, TX 76180</div>
+          <div class="chip-row">
+            <span class="pill">Tarrant County</span>
+            <span class="pill pill-accent">Walk-ins</span>
+          </div>
+        </div>
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blue);"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="/locations/mesquite/" class="loc-big-card fade-in">
+        <div class="pin">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="city"><em>Mesquite</em></div>
+          <div class="addr">3400 I-30 E, Mesquite, TX 75150</div>
+          <div class="chip-row">
+            <span class="pill">East Dallas</span>
+            <span class="pill pill-accent">Walk-ins</span>
+          </div>
+        </div>
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blue);"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="/locations/valley-ranch/" class="loc-big-card fade-in">
+        <div class="pin">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="city">Valley <em>Ranch</em></div>
+          <div class="addr">10009 N MacArthur Blvd, Irving, TX 75063</div>
+          <div class="chip-row">
+            <span class="pill">Irving</span>
+            <span class="pill pill-accent">Walk-ins</span>
+          </div>
+        </div>
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blue);"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="map-panel fade-in">
+      <div>
+        <div class="l">✦ Dallas–Fort Worth Metroplex</div>
+        <h3>Our footprint<br>across <em>DFW.</em></h3>
+      </div>
+
+      <div class="map-viz">
+        <svg aria-hidden="true" viewBox="0 0 400 400">
+          <defs>
+            <pattern id="map-grid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M 28 0 L 0 0 0 28" stroke="white" stroke-width="0.3" opacity="0.12" fill="none"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="400" fill="url(#map-grid)"/>
+          <path d="M 40 200 Q 200 180, 360 220" stroke="white" stroke-width="1" opacity="0.25" fill="none"/>
+          <path d="M 200 40 Q 220 200, 180 360" stroke="white" stroke-width="1" opacity="0.25" fill="none"/>
+          <path d="M 60 300 Q 200 280, 340 300" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+
+          <g>
+            <circle cx="230" cy="210" r="26" fill="#e89056" opacity="0.3"/>
+            <circle cx="230" cy="210" r="14" fill="#e89056"/>
+            <text x="230" y="215" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="JetBrains Mono">1</text>
+            <text x="230" y="256" text-anchor="middle" fill="white" font-size="10" font-family="JetBrains Mono" opacity="0.8">DALLAS</text>
+
+            <circle cx="80" cy="170" r="26" fill="#e89056" opacity="0.3"/>
+            <circle cx="80" cy="170" r="14" fill="#e89056"/>
+            <text x="80" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="JetBrains Mono">2</text>
+            <text x="80" y="216" text-anchor="middle" fill="white" font-size="10" font-family="JetBrains Mono" opacity="0.8">NRH</text>
+
+            <circle cx="310" cy="240" r="26" fill="#e89056" opacity="0.3"/>
+            <circle cx="310" cy="240" r="14" fill="#e89056"/>
+            <text x="310" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="JetBrains Mono">3</text>
+            <text x="310" y="286" text-anchor="middle" fill="white" font-size="10" font-family="JetBrains Mono" opacity="0.8">MESQUITE</text>
+
+            <circle cx="150" cy="140" r="26" fill="#e89056" opacity="0.3"/>
+            <circle cx="150" cy="140" r="14" fill="#e89056"/>
+            <text x="150" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="JetBrains Mono">4</text>
+            <text x="150" y="115" text-anchor="middle" fill="white" font-size="10" font-family="JetBrains Mono" opacity="0.8">VALLEY RANCH</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="map-legend">
+        <a href="/locations/dallas/" class="legend-row"><span class="legend-num">1</span>Dallas · N Buckner Blvd</a>
+        <a href="/locations/north-richland-hills/" class="legend-row"><span class="legend-num">2</span>North Richland Hills</a>
+        <a href="/locations/mesquite/" class="legend-row"><span class="legend-num">3</span>Mesquite · I-30 E</a>
+        <a href="/locations/valley-ranch/" class="legend-row"><span class="legend-num">4</span>Valley Ranch · Irving</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="big-cta">
+  <div class="big-cta-inner">
+    <span class="overline fade-in">◆ Need help choosing?</span>
+    <h2 class="fade-in">Call us. We'll point<br>you to the <em>nearest.</em></h2>
+    <p class="fade-in">All four clinics share the same team philosophy, the same hours, and the same welcome.</p>
+    <div class="cta-row fade-in">
+      <a href="/contact/" class="btn btn-primary">Call your nearest clinic</a>
+      <a href="/book-online/" class="btn btn-outline">Book online</a>
+    </div>
+  </div>
+</section>
+</Base>

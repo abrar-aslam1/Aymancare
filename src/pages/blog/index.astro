@@ -1,0 +1,167 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Health Blog — Tips From Your Dallas–Fort Worth Doctors | AymanCare"
+  description="Practical health advice from the AymanCare team: seasonal illness, pediatrics, allergies, insurance tips and more for DFW families."
+>
+  <Fragment slot="head">
+  <script type="application/ld+json" is:inline set:html={"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://aymancare.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://aymancare.com/blog/\"}]}"} />
+  </Fragment>
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="/">Home</a><span class="sep">✦</span><span>Blog</span>
+  </div>
+  <h1 class="page-title fade-in">Notes from<br>the <em>clinic.</em></h1>
+  <p class="page-subtitle fade-in">Practical health guidance from Dr. Khan and the AymanCare team — on the things we see most often in our exam rooms.</p>
+</section>
+
+<!-- Featured article -->
+<section class="section" style="padding-bottom: 0;">
+  <a href="/blog/why-primary-care/" class="svc-card feature-full fade-in" style="text-decoration: none;">
+    <div class="svc-card-img">
+      <img src="/images/primary-care-clinic.jpg" alt="AymanCare team" loading="lazy">
+      <div class="svc-card-badge">Featured</div>
+    </div>
+    <div class="svc-card-body">
+      <span class="overline" style="margin-bottom: 16px; display: block;">◆ From Dr. Khan</span>
+      <h3 style="font-size: 32px;">Why having a <em>primary care</em> physician matters more than ever</h3>
+      <p style="font-size: 16px; margin-bottom: 16px;">In a world of urgent-care-only visits and telehealth triage, the case for a dedicated doctor who knows your history, your family, and your goals has never been stronger. Dr. Khan explains why continuity of care is the foundation of good health.</p>
+      <span class="svc-link">Read article →</span>
+    </div>
+  </a>
+</section>
+
+<!-- Article grid -->
+<section class="section">
+  <div class="section-header fade-in">
+    <div>
+      <span class="overline" style="margin-bottom: 16px; display: block;">◆ Latest articles</span>
+      <h2 class="section-title" style="font-size: clamp(32px, 4vw, 48px);">From our <em>exam rooms</em> to you.</h2>
+    </div>
+    <p class="section-subtitle">Health topics written for patients, not textbooks.</p>
+  </div>
+
+  <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <a href="/blog/annual-physical/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/stethoscope.jpg" alt="Annual physical" loading="lazy">
+        <div class="svc-card-badge">Preventive care</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>What an <em>annual</em> physical actually checks</h3>
+        <p>A walkthrough of every screening we do during your yearly visit — and why each one matters.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/cold-flu-or-covid/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/flu-care.jpg" alt="Cold vs flu" loading="lazy">
+        <div class="svc-card-badge">Seasonal</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>Cold, flu, or <em>COVID?</em></h3>
+        <p>The symptoms overlap more than you'd think. Here's how we tell them apart — and when to come in.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/dallas-allergy-guide/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/allergy-hero.jpg" alt="Allergies" loading="lazy">
+        <div class="svc-card-badge">Allergy</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>Dallas <em>allergy</em> season, explained</h3>
+        <p>Cedar, ragweed, oak. What triggers what — and the treatments that actually work.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/when-to-bring-child-in/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/clinic-interior.jpg" alt="Pediatric" loading="lazy">
+        <div class="svc-card-badge">Pediatric</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>When to bring your <em>child</em> in</h3>
+        <p>A parent-friendly guide to the symptoms that need a same-day visit and the ones that can wait.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/sustainable-weight-loss/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/weight-loss-hero.jpg" alt="Weight loss" loading="lazy">
+        <div class="svc-card-badge">Wellness</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>The truth about <em>sustainable</em> weight loss</h3>
+        <p>Why fad diets fail — and what a medically-supervised program looks like at AymanCare.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/insurance-benefits/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/stethoscope.jpg" alt="Insurance" loading="lazy">
+        <div class="svc-card-badge">Billing</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>Understanding your <em>insurance</em> benefits</h3>
+        <p>Copays, deductibles, in-network vs out-of-network — a plain-English guide from our front-desk team.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/er-vs-urgent-care/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/clinic-exterior.jpeg" alt="Walk-in care" loading="lazy">
+        <div class="svc-card-badge">Urgent care</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>ER vs. urgent care: <em>how</em> to decide</h3>
+        <p>Not everything needs an emergency room. Here's a clear guide to what belongs at urgent care — and what doesn't.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/five-healthy-habits/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/flu-care.jpg" alt="Staying healthy" loading="lazy">
+        <div class="svc-card-badge">Prevention</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>Five habits that <em>actually</em> prevent illness</h3>
+        <p>Sleep, hydration, hand-washing, and two more that our physicians recommend to every patient.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+
+    <a href="/blog/four-clinics-one-team/" class="svc-card fade-in">
+      <div class="svc-card-img">
+        <img src="/images/loc-dallas.jpg" alt="AymanCare locations" loading="lazy">
+        <div class="svc-card-badge">Locations</div>
+      </div>
+      <div class="svc-card-body">
+        <h3>Four clinics, one <em>standard</em> of care</h3>
+        <p>A look inside what makes each AymanCare location unique — and what they all share.</p>
+        <span class="svc-link">Read article →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="big-cta">
+  <div class="big-cta-inner">
+    <span class="overline fade-in">◆ Have a health question?</span>
+    <h2 class="fade-in">We'd rather see you<br><em>in person.</em></h2>
+    <p class="fade-in">Articles are helpful — but nothing replaces a conversation with your doctor. Book a visit and let's talk.</p>
+    <div class="cta-row fade-in">
+      <a href="/book-online/" class="btn btn-primary">Book appointment →</a>
+      <a href="/contact/" class="btn btn-outline">Contact us</a>
+    </div>
+  </div>
+</section>
+</Base>

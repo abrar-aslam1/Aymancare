@@ -1,0 +1,429 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+const { title, description, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/images/hero-doctor.jpg', Astro.site);
+const orgSchema = "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"MedicalOrganization\",\"@id\":\"https://aymancare.com/#organization\",\"name\":\"AymanCare\",\"alternateName\":\"AymanCare Medical Clinic\",\"url\":\"https://aymancare.com/\",\"logo\":\"https://aymancare.com/images/logo.png\",\"image\":\"https://aymancare.com/images/hero-doctor.jpg\",\"description\":\"AymanCare provides compassionate primary and urgent care for the Dallas–Fort Worth community across four locations since 2013.\",\"telephone\":\"+12143287400\",\"medicalSpecialty\":[\"PrimaryCare\",\"Pediatric\"],\"sameAs\":[\"https://share.google/r68RxahU9wK78SchP\",\"https://share.google/WqfsdISLFMnBLnNVY\",\"https://share.google/xzjU1sVIsuyLOqynI\",\"https://share.google/O7Pri9B62mYRXkt9E\"]},{\"@type\":\"WebSite\",\"@id\":\"https://aymancare.com/#website\",\"url\":\"https://aymancare.com/\",\"name\":\"AymanCare\",\"description\":\"Primary care, urgent care, and pediatrics across four Dallas-area clinics.\",\"publisher\":{\"@id\":\"https://aymancare.com/#organization\"}}]}";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+{noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />}
+<link rel="canonical" href={canonical}>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AymanCare">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+
+<meta name="theme-color" content="#3888c8">
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="apple-touch-icon" href="/images/logo.png">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json" is:inline set:html={orgSchema} />
+<script is:inline>
+// Redirect legacy hash-routed URLs (aymancare.com/#page-x) to their new pages
+(function(){
+  var map = {"page-home":"/","page-services":"/services/","page-about":"/about/","page-locations":"/locations/","page-contact":"/contact/","page-location-dallas":"/locations/dallas/","page-location-nrh":"/locations/north-richland-hills/","page-location-mesquite":"/locations/mesquite/","page-location-valley":"/locations/valley-ranch/","page-primary-care":"/services/primary-care/","page-walk-in":"/services/walk-in-urgent-care/","page-pediatric-care":"/services/pediatric-care/","page-flu":"/services/flu-treatment/","page-allergy":"/services/allergy-treatment/","page-weight-loss":"/services/weight-loss/","page-covid":"/services/covid-19-testing/","page-blog":"/blog/","page-book-online":"/book-online/","page-insurance":"/insurance/","page-thank-you":"/thank-you/","page-privacy":"/privacy/","page-heart-month":"/blog/heart-health-month/","page-why-primary-care":"/blog/why-primary-care/","page-annual-physical":"/blog/annual-physical/","page-cold-flu-covid":"/blog/cold-flu-or-covid/","page-dallas-allergy":"/blog/dallas-allergy-guide/","page-when-to-bring-child-in":"/blog/when-to-bring-child-in/","page-sustainable-weight-loss":"/blog/sustainable-weight-loss/","page-insurance-benefits":"/blog/insurance-benefits/","page-er-vs-urgent-care":"/blog/er-vs-urgent-care/","page-five-habits":"/blog/five-healthy-habits/","page-four-clinics":"/blog/four-clinics-one-team/"};
+  function go() {
+    var h = location.hash.replace('#', '');
+    if (map[h] && map[h] !== location.pathname) location.replace(map[h]);
+  }
+  go();
+  window.addEventListener('hashchange', go);
+})();
+</script>
+<slot name="head" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="top-strip">
+  <div class="top-strip-inner">
+    <div class="top-left">
+      <span><span class="dot"></span>Now accepting walk-ins</span>
+      <span>Four Dallas-area locations</span>
+    </div>
+    <div class="top-right">
+      <span>Mon–Fri · Open Today</span>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="AymanCare Primary & Urgent Care">
+    </a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="/services/" data-nav="services">Services<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="nav-dropdown">
+          <li class="dd-label">Clinical services</li>
+          <li><a href="/services/primary-care/">Primary Care</a></li>
+          <li><a href="/services/walk-in-urgent-care/">Walk-In Urgent</a></li>
+          <li><a href="/services/pediatric-care/">Pediatric Care</a></li>
+          <li><hr></li>
+          <li class="dd-label">Specialty</li>
+          <li><a href="/services/allergy-treatment/">Allergy Treatment</a></li>
+          <li><a href="/services/flu-treatment/">Flu Symptoms</a></li>
+          <li><a href="/services/weight-loss/">Weight Loss</a></li>
+          <li><a href="/services/walk-in-urgent-care/">COVID-19 Testing</a></li>
+        </ul>
+      </li>
+      <li><a href="/about/" data-nav="about">About</a></li>
+      <li class="has-dropdown">
+        <a href="/locations/" data-nav="locations">Locations<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="nav-dropdown">
+          <li class="dd-label">Dallas–Fort Worth</li>
+          <li><a href="/locations/dallas/">Dallas — N Buckner Blvd</a></li>
+          <li><a href="/locations/north-richland-hills/">North Richland Hills</a></li>
+          <li><a href="/locations/mesquite/">Mesquite — I-30 E</a></li>
+          <li><a href="/locations/valley-ranch/">Valley Ranch — Irving</a></li>
+        </ul>
+      </li>
+      <li><a href="/blog/" data-nav="blog">Blog</a></li>
+      <li><a href="/contact/" data-nav="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/book-online/" class="nav-cta">Book Online →</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-inner">
+    <a href="/" class="mm-link">Home</a>
+    <a href="/about/" class="mm-link">About</a>
+    <a href="/blog/" class="mm-link">Blog</a>
+    <a href="/contact/" class="mm-link">Contact</a>
+
+    <div class="mm-locations">
+      <div class="mm-locations-label">Services</div>
+      <a href="/services/primary-care/">Primary Care</a>
+      <a href="/services/walk-in-urgent-care/">Walk-In Urgent</a>
+      <a href="/services/pediatric-care/">Pediatric Care</a>
+      <a href="/services/allergy-treatment/">Allergy Treatment</a>
+      <a href="/services/flu-treatment/">Flu Symptoms</a>
+      <a href="/services/weight-loss/">Weight Loss</a>
+      <a href="/services/walk-in-urgent-care/">COVID-19 Testing</a>
+    </div>
+
+    <a href="/contact/" class="mm-phone">
+      <div class="mm-phone-icon">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div>
+        <div class="mm-phone-num">Find your clinic</div>
+        <div class="mm-phone-label">View all numbers →</div>
+      </div>
+    </a>
+
+    <a href="/book-online/" class="mm-cta">Book Online →</a>
+
+    <div class="mm-locations">
+      <div class="mm-locations-label">Our locations</div>
+      <a href="/locations/dallas/">Dallas — N Buckner Blvd</a>
+      <a href="/locations/north-richland-hills/">North Richland Hills</a>
+      <a href="/locations/mesquite/">Mesquite — I-30 E</a>
+      <a href="/locations/valley-ranch/">Valley Ranch — Irving</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<slot />
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-wrap">
+          <img src="/images/logo-transparent.png" alt="AymanCare Primary & Urgent Care">
+        </div>
+        <p class="footer-desc">Compassionate primary and urgent care for the Dallas–Fort Worth community. Serving patients across four locations since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/primary-care/">Primary Care</a></li>
+          <li><a href="/services/walk-in-urgent-care/">Walk-In / COVID</a></li>
+          <li><a href="/services/pediatric-care/">Pediatric Care</a></li>
+          <li><a href="/services/allergy-treatment/">Allergy Treatment</a></li>
+          <li><a href="/services/weight-loss/">Weight Loss</a></li>
+          <li><a href="/services/flu-treatment/">Flu Symptoms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/dallas/">Dallas</a></li>
+          <li><a href="/locations/north-richland-hills/">North Richland Hills</a></li>
+          <li><a href="/locations/mesquite/">Mesquite</a></li>
+          <li><a href="/locations/valley-ranch/">Valley Ranch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">All Services</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/privacy/">Notice of Privacy Practices</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Patients</h4>
+        <ul>
+          <li><a href="/contact/">Book Online</a></li>
+          <li><a href="/contact/">All clinic numbers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 AymanCare Medical Clinic · All rights reserved</div>
+      <div>Powered by <a href="https://amarosystems.com/">Amaro Systems</a></div>
+    </div>
+  </div>
+</footer>
+
+<script is:inline>
+(function(){
+  // Reveal fade-in elements as they enter the viewport
+  var els = document.querySelectorAll('.fade-in');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  // ---- Mobile menu ----
+  var hamburger = document.querySelector('.nav-hamburger');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var overlay = document.getElementById('mobile-overlay');
+
+  function openMobileMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  if (hamburger) {
+    hamburger.addEventListener('click', function() {
+      if (mobileMenu.classList.contains('open')) closeMobileMenu();
+      else openMobileMenu();
+    });
+    overlay.addEventListener('click', closeMobileMenu);
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+})();
+
+// ---- Booking widget: remember selections, hand off to the book-online form ----
+(function(){
+  var serviceGrid   = document.getElementById('booking-service-grid');
+  var locationGrid  = document.getElementById('booking-location-grid');
+  var timeGrid      = document.getElementById('booking-time-grid');
+  var sumService    = document.getElementById('sum-service');
+  var sumLocation   = document.getElementById('sum-location');
+  var sumTime       = document.getElementById('sum-time');
+  var confirmBtn    = document.getElementById('confirm-booking-btn');
+
+  var selected = { service: 'Primary care', location: 'Dallas', time: '2:15 PM' };
+  var serviceMap = {
+    'Primary care':     'Primary care — annual physical',
+    'Walk-in urgent':   'Walk-in / urgent',
+    'Pediatric visit':  'Pediatric visit',
+    'Something else':   ''
+  };
+
+  function wireGrid(grid, onSelect) {
+    if (!grid) return;
+    grid.querySelectorAll('.opt').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        grid.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        var val = opt.querySelector('h4').textContent.trim();
+        if (onSelect) onSelect(val);
+      });
+    });
+  }
+  wireGrid(serviceGrid, function(val) {
+    selected.service = val;
+    if (sumService) sumService.innerHTML = '<em>' + val + '</em>';
+  });
+  wireGrid(locationGrid, function(val) {
+    selected.location = val;
+    if (sumLocation) sumLocation.textContent = val;
+  });
+  if (timeGrid) {
+    timeGrid.querySelectorAll('.time').forEach(function(t) {
+      t.addEventListener('click', function() {
+        timeGrid.querySelectorAll('.time').forEach(function(x){ x.classList.remove('selected'); });
+        t.classList.add('selected');
+        selected.time = t.textContent.trim();
+        if (sumTime) sumTime.textContent = selected.time;
+      });
+    });
+  }
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', function() {
+      try { sessionStorage.setItem('ac-booking', JSON.stringify({ service: serviceMap[selected.service] || '', location: selected.location })); } catch (e) {}
+      window.location.href = '/book-online/';
+    });
+  }
+
+  // On the book-online page: pre-fill from a widget hand-off
+  var boForm = document.forms['book-online'];
+  if (boForm) {
+    try {
+      var stored = sessionStorage.getItem('ac-booking');
+      if (stored) {
+        sessionStorage.removeItem('ac-booking');
+        var pick = JSON.parse(stored);
+        var locSel = boForm.querySelector('select[name="location"]');
+        var reasonSel = boForm.querySelector('select[name="reason"]');
+        if (locSel && pick.location) {
+          for (var i = 0; i < locSel.options.length; i++) {
+            if (locSel.options[i].value === pick.location) { locSel.selectedIndex = i; break; }
+          }
+        }
+        if (reasonSel && pick.service) {
+          for (var j = 0; j < reasonSel.options.length; j++) {
+            if (reasonSel.options[j].text === pick.service) { reasonSel.selectedIndex = j; break; }
+          }
+        }
+      }
+    } catch (e) {}
+  }
+})();
+
+// ---- File upload drag-and-drop ----
+(function(){
+  var drop = document.getElementById('upload-drop');
+  var input = document.getElementById('upload-input');
+  var fileList = document.getElementById('upload-file-list');
+  var dropInner = document.getElementById('upload-drop-inner');
+  if (!drop || !input) return;
+
+  var selectedFiles = [];
+
+  function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function renderFiles() {
+    fileList.innerHTML = '';
+    if (selectedFiles.length === 0) {
+      dropInner.style.display = 'flex';
+      return;
+    }
+    dropInner.style.display = 'none';
+    selectedFiles.forEach(function(f, i) {
+      var item = document.createElement('div');
+      item.className = 'upload-file-item';
+      item.innerHTML =
+        '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>' +
+        '<span>' + f.name + '</span>' +
+        '<span class="upload-file-size">' + formatSize(f.size) + '</span>' +
+        '<button type="button" class="upload-file-remove" data-idx="' + i + '" aria-label="Remove file">' +
+          '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>';
+      fileList.appendChild(item);
+    });
+    fileList.querySelectorAll('.upload-file-remove').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var idx = parseInt(btn.getAttribute('data-idx'));
+        selectedFiles.splice(idx, 1);
+        syncInput();
+        renderFiles();
+      });
+    });
+  }
+
+  function syncInput() {
+    var dt = new DataTransfer();
+    selectedFiles.forEach(function(f) { dt.items.add(f); });
+    input.files = dt.files;
+  }
+
+  function addFiles(files) {
+    Array.from(files).forEach(function(f) {
+      if (f.size <= 10 * 1024 * 1024) selectedFiles.push(f);
+    });
+    syncInput();
+    renderFiles();
+  }
+
+  input.addEventListener('change', function() { addFiles(input.files); });
+  drop.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    drop.classList.add('drag-over');
+  });
+  drop.addEventListener('dragleave', function() { drop.classList.remove('drag-over'); });
+  drop.addEventListener('drop', function(e) {
+    e.preventDefault();
+    drop.classList.remove('drag-over');
+    addFiles(e.dataTransfer.files);
+  });
+  drop.addEventListener('click', function(e) {
+    if (e.target.closest('.upload-file-remove')) return;
+    input.click();
+  });
+  drop.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Book an Appointment Online | AymanCare Dallas–Fort Worth"
+  description="Request an appointment at any AymanCare clinic — Dallas, North Richland Hills, Mesquite or Valley Ranch. Confirmed within one business hour."
+>
+  <Fragment slot="head">
+  <script type="application/ld+json" is:inline set:html={"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://aymancare.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Book Online\",\"item\":\"https://aymancare.com/book-online/\"}]}"} />
+  </Fragment>
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="/">Home</a><span class="sep">✦</span><span>Book Online</span>
+  </div>
+  <h1 class="page-title fade-in">Book your <em>visit.</em></h1>
+  <p class="page-subtitle fade-in">Same-day and next-day appointments available at all four locations. Fill out the form below, or <a href="/contact/" style="color: var(--blue); border-bottom: 1px solid currentColor;">call your nearest clinic</a>.</p>
+</section>
+
+<!-- How it works steps -->
+<section class="section" style="padding-bottom: 40px;">
+  <div class="promise" style="border-radius: 32px;">
+    <span class="overline fade-in">◆ How it works</span>
+    <h2 class="fade-in" style="margin-bottom: 48px;">Three steps to your <em>appointment.</em></h2>
+    <div class="promise-steps" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="promise-step fade-in">
+        <div class="promise-step-num">01</div>
+        <h4><em>Fill</em> out the form</h4>
+        <p>Tell us who you are, which location you prefer, and what kind of visit you need. Takes under a minute.</p>
+      </div>
+      <div class="promise-step fade-in">
+        <div class="promise-step-num">02</div>
+        <h4>We <em>confirm</em></h4>
+        <p>A team member will call or text to confirm your appointment — usually within one business hour.</p>
+      </div>
+      <div class="promise-step fade-in">
+        <div class="promise-step-num">03</div>
+        <h4><em>Show</em> up</h4>
+        <p>Arrive at your chosen location. Bring your ID and insurance card. We'll take it from there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form + sidebar -->
+<section class="section" style="padding-top: 0;">
+  <div class="contact-grid">
+    <div class="form-card fade-in">
+      <h2>Request an <em>appointment.</em></h2>
+      <p class="sub">Fill out the form and a team member will reach out to confirm your time.</p>
+
+      <div class="new-patient-notice fade-in">
+        <div class="np-badge">New patient?</div>
+        <p>Download and complete your patient registration before your visit — accepted at all four AymanCare locations. Saves time at check-in.</p>
+        <div class="np-links">
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Registration (English)
+          </a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Registration (Spanish)
+          </a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Medical Release
+          </a>
+        </div>
+      </div>
+
+      <form name="book-online" method="POST" action="/thank-you/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="book-online">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-fields">
+          <div class="field">
+            <label for="f-first-name">First name</label>
+            <input name="first-name" id="f-first-name" type="text" placeholder="Jane" required>
+          </div>
+          <div class="field">
+            <label for="f-last-name">Last name</label>
+            <input name="last-name" id="f-last-name" type="text" placeholder="Doe" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input name="email" id="f-email" type="email" placeholder="you@email.com" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input name="phone" id="f-phone" type="tel" placeholder="(555) 123-4567" required>
+          </div>
+          <div class="field full">
+            <label for="f-location">Preferred location</label>
+            <select name="location" id="f-location">
+              <option value="Dallas">Dallas — N Buckner Blvd</option>
+              <option value="North Richland Hills">North Richland Hills — Bedford Euless Rd</option>
+              <option value="Mesquite">Mesquite — I-30 E</option>
+              <option value="Valley Ranch">Valley Ranch — MacArthur Blvd</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-reason">Reason for visit</label>
+            <select name="reason" id="f-reason">
+              <option>Primary care — annual physical</option>
+              <option>Walk-in / urgent</option>
+              <option>Pediatric visit</option>
+              <option>Flu / cold symptoms</option>
+              <option>Allergy treatment</option>
+              <option>Weight loss consultation</option>
+              <option>COVID-19 testing</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-notes">Additional notes (optional)</label>
+            <textarea name="notes" id="f-notes" placeholder="Anything we should know ahead of your visit?"></textarea>
+          </div>
+          <div class="full">
+            <div class="upload-section">
+              <div class="upload-label">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                Upload completed patient forms <span class="upload-opt">Optional</span>
+              </div>
+              <p class="upload-hint">New patient? Attach your completed registration form here and we'll have it ready before your visit. Accepts PDF, JPG, or PNG (max 10MB per file).</p>
+              <label class="upload-drop" id="upload-drop">
+                <input type="file" name="patient-forms" accept=".pdf,.jpg,.jpeg,.png" multiple id="upload-input">
+                <div class="upload-drop-inner" id="upload-drop-inner">
+                  <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span class="upload-drop-text">Drag & drop files here, or <strong>click to browse</strong></span>
+                  <span class="upload-drop-sub">PDF · JPG · PNG — max 10MB each</span>
+                </div>
+                <div class="upload-file-list" id="upload-file-list"></div>
+              </label>
+            </div>
+          </div>
+          <div class="full" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 13px; border: none;">
+              Request appointment →
+            </button>
+          </div>
+        </div>
+      </form>
+      <p style="margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);">
+        ✦ A team member will confirm within one business hour.
+      </p>
+    </div>
+
+    <div class="contact-side">
+      <a href="/contact/" class="side-card fade-in">
+        <div class="icon">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Prefer to <em>call?</em></h3>
+        <p>Our team can schedule your visit over the phone — same availability.</p>
+        <span class="link-big">View all numbers →</span>
+      </a>
+
+      <div class="side-card fade-in">
+        <div class="icon">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Walk-ins <em>welcome</em></h3>
+        <p>No appointment needed for urgent care. Just show up at any of our four locations during business hours.</p>
+        <span class="arrow-link">Find a location ↗</span>
+      </div>
+
+      <div class="side-card dark fade-in">
+        <div class="icon">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        </div>
+        <h3>What to <em>bring</em></h3>
+        <p>Photo ID, insurance card, and a list of current medications. <strong>New patient?</strong> Download and complete your registration form before you arrive — saves time at check-in.</p>
+        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="arrow-link">Download registration form ↓</a>
+      </div>
+
+      <div class="side-card fade-in" style="border: 1px solid var(--blue-line); background: var(--blue-tint);">
+        <div class="icon" style="background: var(--blue-soft); color: var(--blue-deep);">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h3>New patient <em>forms</em></h3>
+        <p>Download and fill these out before your first visit. You can also email them to <a href="mailto:aymancare2019@gmail.com" style="color:var(--blue);">aymancare2019@gmail.com</a>.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="arrow-link">Patient Registration (English) ↓</a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener" class="arrow-link">Patient Registration (Spanish) ↓</a>
+          <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener" class="arrow-link">Medical Release Form ↓</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
