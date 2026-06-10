@@ -7,7 +7,6 @@
 <meta name="description" content="Need a doctor in Dallas–Fort Worth? AymanCare delivers same-day primary care, urgent care &amp; pediatrics at 4 neighborhood clinics. Walk-ins always welcome.">
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-<!-- Canonical (update to production domain before launch) -->
 <link rel="canonical" href="https://aymancare.com/">
 
 <!-- Open Graph -->
@@ -24,7 +23,17 @@
 <meta name="twitter:description" content="Need a doctor in Dallas–Fort Worth? AymanCare delivers same-day primary care, urgent care &amp; pediatrics at 4 neighborhood clinics. Walk-ins always welcome.">
 <meta name="twitter:image" content="https://aymancare.com/images/hero-doctor.jpg">
 
-<!-- Favicon (replace with actual .ico / .png assets before launch) -->
+<!-- Preload LCP hero image -->
+<link rel="preload" as="image" href="images/staff-photo.jpg">
+
+<!-- OG image dimensions -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Theme color for mobile browsers -->
+<meta name="theme-color" content="#3888c8">
+
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="apple-touch-icon" href="images/logo.png">
 
@@ -3389,6 +3398,52 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://aymancare.com/#page-locations" },
         { "@type": "ListItem", "position": 3, "name": "Valley Ranch", "item": "https://aymancare.com/#page-location-valley" }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aymancare.com/#website",
+      "url": "https://aymancare.com/",
+      "name": "AymanCare",
+      "description": "Primary care, urgent care, and pediatrics across four Dallas-area clinics.",
+      "publisher": { "@id": "https://aymancare.com/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aymancare.com/#faq-insurance",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a referral to visit AymanCare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most insurance plans do not require a referral for primary care or urgent care visits. If your plan is an HMO that requires referrals for specialist visits, we can help coordinate that during your appointment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my insurance isn't listed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with many plans beyond those listed above. Call us at (972) 288-9747 and we'll check your specific plan. We're continually adding new insurance partnerships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my HSA or FSA at AymanCare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We accept Health Savings Account (HSA) and Flexible Spending Account (FSA) cards for copays, deductibles, and self-pay visits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer payment plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you have a balance after insurance processing, we can arrange a payment plan that works for your budget. Just speak with our front desk team."
+          }
+        }
+      ]
     }
   ]
 }
@@ -4061,7 +4116,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <p class="loc-d-addr fade-in">N Buckner Blvd,<br>Dallas, TX 75218</p>
       <div class="fade-in" style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="#page-book-online" class="btn btn-primary">Book appointment →</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Dallas+N+Buckner+Blvd+Dallas+TX+75218" target="_blank" rel="noopener" target="_blank" class="btn btn-outline">Get directions ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Dallas+N+Buckner+Blvd+Dallas+TX+75218" target="_blank" rel="noopener" class="btn btn-outline">Get directions ↗</a>
       </div>
     </div>
 
@@ -4104,7 +4159,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         </svg>
       </div>
       <div>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Dallas+N+Buckner+Blvd+Dallas+TX+75218" target="_blank" rel="noopener" target="_blank" class="btn btn-accent">Open in Google Maps →</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Dallas+N+Buckner+Blvd+Dallas+TX+75218" target="_blank" rel="noopener" class="btn btn-accent">Open in Google Maps →</a>
       </div>
     </div>
 
@@ -4224,7 +4279,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <p class="loc-d-addr fade-in">8208 Bedford Euless Rd,<br>North Richland Hills, TX</p>
       <div class="fade-in" style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="#page-book-online" class="btn btn-primary">Book appointment →</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+North+Richland+Hills+8208+Bedford+Euless+Rd" target="_blank" rel="noopener" target="_blank" class="btn btn-outline">Get directions ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+North+Richland+Hills+8208+Bedford+Euless+Rd" target="_blank" rel="noopener" class="btn btn-outline">Get directions ↗</a>
       </div>
     </div>
 
@@ -4267,7 +4322,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         </svg>
       </div>
       <div>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+North+Richland+Hills+8208+Bedford+Euless+Rd" target="_blank" rel="noopener" target="_blank" class="btn btn-accent">Open in Google Maps →</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+North+Richland+Hills+8208+Bedford+Euless+Rd" target="_blank" rel="noopener" class="btn btn-accent">Open in Google Maps →</a>
       </div>
     </div>
 
@@ -4423,7 +4478,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <p class="loc-d-addr fade-in">3400 I-30 E,<br>Mesquite, TX 75150</p>
       <div class="fade-in" style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="#page-book-online" class="btn btn-primary">Book appointment →</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Mesquite+3400+I-30+E+Mesquite+TX+75150" target="_blank" rel="noopener" target="_blank" class="btn btn-outline">Get directions ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Mesquite+3400+I-30+E+Mesquite+TX+75150" target="_blank" rel="noopener" class="btn btn-outline">Get directions ↗</a>
       </div>
     </div>
 
@@ -4466,7 +4521,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         </svg>
       </div>
       <div>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Mesquite+3400+I-30+E+Mesquite+TX+75150" target="_blank" rel="noopener" target="_blank" class="btn btn-accent">Open in Google Maps →</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Mesquite+3400+I-30+E+Mesquite+TX+75150" target="_blank" rel="noopener" class="btn btn-accent">Open in Google Maps →</a>
       </div>
     </div>
 
@@ -4586,7 +4641,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <p class="loc-d-addr fade-in">10009 N MacArthur Blvd,<br>Irving, TX 75063</p>
       <div class="fade-in" style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="#page-book-online" class="btn btn-primary">Book appointment →</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Valley+Ranch+10009+N+MacArthur+Blvd+Irving+TX+75063" target="_blank" rel="noopener" target="_blank" class="btn btn-outline">Get directions ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Valley+Ranch+10009+N+MacArthur+Blvd+Irving+TX+75063" target="_blank" rel="noopener" class="btn btn-outline">Get directions ↗</a>
       </div>
     </div>
 
@@ -4629,7 +4684,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         </svg>
       </div>
       <div>
-        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Valley+Ranch+10009+N+MacArthur+Blvd+Irving+TX+75063" target="_blank" rel="noopener" target="_blank" class="btn btn-accent">Open in Google Maps →</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AymanCare+Valley+Ranch+10009+N+MacArthur+Blvd+Irving+TX+75063" target="_blank" rel="noopener" class="btn btn-accent">Open in Google Maps →</a>
       </div>
     </div>
 
@@ -6443,19 +6498,8 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
     <div class="footer-grid">
       <div>
         <div class="footer-brand-wrap">
-          <div class="footer-wordmark">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="2" y="2" width="44" height="44" rx="12" fill="#3888c8" fill-opacity="0.18" stroke="#3888c8" stroke-opacity="0.6" stroke-width="1"/>
-              <path d="M24 13 L24 35 M13 24 L35 24" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="4" fill="#e89056"/>
-            </svg>
-            <div class="footer-wordmark-text">
-              <div class="name">Ayman<em>Care</em></div>
-              <span class="tag">Primary & Urgent Care</span>
-            </div>
-          </div>
+          <img src="images/logo.png" alt="AymanCare Primary & Urgent Care" style="height: 64px; width: auto; display: block;">
         </div>
-          <img src="images/logo.png" alt="AymanCare Primary & Urgent Care">
         <p class="footer-desc">Compassionate primary and urgent care for the Dallas–Fort Worth community. Serving patients across four locations since 2013.</p>
       </div>
       <div class="footer-col">
