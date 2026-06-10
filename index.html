@@ -3193,6 +3193,16 @@ footer {
 
 
 
+/* ============ BLOG ARTICLES — MOBILE ============ */
+@media (max-width: 640px) {
+  .page-hero { padding: 56px 20px 36px; }
+  .page-subtitle { font-size: 17px; }
+}
+@media (max-width: 480px) {
+  .neighborhood-band { padding: 32px 24px; gap: 24px; }
+  .neighborhood-band h2 { font-size: 28px; }
+}
+
 /* Demo page switcher */
 /* CSS-only routing via :target pseudo-class */
 .demo-page { display: none; }
@@ -5530,7 +5540,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
 
 <!-- Featured article -->
 <section class="section" style="padding-bottom: 0;">
-  <a href="#page-blog" class="svc-card feature-full fade-in" style="text-decoration: none;">
+  <a href="#page-why-primary-care" class="svc-card feature-full fade-in" style="text-decoration: none;">
     <div class="svc-card-img">
       <img src="images/primary-care-clinic.jpg" alt="AymanCare team" loading="lazy">
       <div class="svc-card-badge">Featured</div>
@@ -5555,7 +5565,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
   </div>
 
   <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-annual-physical" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/stethoscope.jpg" alt="Annual physical" loading="lazy">
         <div class="svc-card-badge">Preventive care</div>
@@ -5567,7 +5577,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-cold-flu-covid" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/flu-care.jpg" alt="Cold vs flu" loading="lazy">
         <div class="svc-card-badge">Seasonal</div>
@@ -5579,7 +5589,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-dallas-allergy" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/allergy-hero.jpg" alt="Allergies" loading="lazy">
         <div class="svc-card-badge">Allergy</div>
@@ -5591,7 +5601,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-when-to-bring-child-in" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/clinic-interior.jpg" alt="Pediatric" loading="lazy">
         <div class="svc-card-badge">Pediatric</div>
@@ -5603,7 +5613,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-sustainable-weight-loss" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/weight-loss-hero.jpg" alt="Weight loss" loading="lazy">
         <div class="svc-card-badge">Wellness</div>
@@ -5615,7 +5625,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-insurance-benefits" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/stethoscope.jpg" alt="Insurance" loading="lazy">
         <div class="svc-card-badge">Billing</div>
@@ -5627,7 +5637,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-er-vs-urgent-care" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/clinic-exterior.jpeg" alt="Walk-in care" loading="lazy">
         <div class="svc-card-badge">Urgent care</div>
@@ -5639,7 +5649,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-five-habits" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/flu-care.jpg" alt="Staying healthy" loading="lazy">
         <div class="svc-card-badge">Prevention</div>
@@ -5651,7 +5661,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
     </a>
 
-    <a href="#page-blog" class="svc-card fade-in">
+    <a href="#page-four-clinics" class="svc-card fade-in">
       <div class="svc-card-img">
         <img src="images/loc-dallas.png" alt="AymanCare locations" loading="lazy">
         <div class="svc-card-badge">Locations</div>
@@ -6094,6 +6104,546 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
           <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
           <a href="#page-primary-care" class="btn btn-ghost">Learn about primary care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: WHY PRIMARY CARE ============ -->
+<div class="demo-page" id="page-why-primary-care">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Why Primary Care Matters</span>
+  </div>
+  <span class="overline fade-in">◆ From Dr. Khan</span>
+  <h2 class="page-title fade-in">Why having a <em>primary care</em><br>physician matters.</h2>
+  <p class="page-subtitle fade-in">In a world of walk-in-only visits and telehealth triage, the case for a dedicated doctor who knows your history has never been stronger.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Your doctor <em>knows your history</em></h3>
+      <p>A primary care physician builds a complete picture of you over time — your medications, family history, chronic conditions, and past lab work. When a new symptom appears, that context matters. A walk-in clinic seeing you for the first time has none of it. Continuity isn't a convenience; it's a clinical advantage.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Preventive care</em> catches problems early</h3>
+      <p>Many of the most serious conditions — high blood pressure, diabetes, elevated cholesterol, and certain cancers — have no obvious symptoms in their early stages. Your primary care doctor schedules the screenings that catch these before they become harder to treat. That annual physical isn't a formality; it's your best early-warning system.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Specialist <em>coordination</em> without the gaps</h3>
+      <p>If you need a cardiologist, a dermatologist, or any specialist, your primary care physician connects the dots. Without that central coordinator, you end up with multiple providers who don't talk to each other — duplicate tests, conflicting prescriptions, and no one accountable for the full picture.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Chronic conditions</em> need a long-term partner</h3>
+      <p>Managing diabetes, hypertension, asthma, or thyroid disease isn't a one-visit fix. It requires regular monitoring, medication adjustments, and a physician who notices when trends are moving in the wrong direction. That relationship — built over months and years — is what makes chronic disease manageable rather than overwhelming.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">It <em>saves money</em> in the long run</h3>
+      <p>Patients with a regular primary care physician visit the emergency room less often, get diagnosed earlier, and have better-managed chronic conditions — all of which translate to lower overall healthcare costs. The annual physical is far less expensive than the ER visit it helps prevent.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Meet your doctor</span>
+        <h2>Start a relationship with <em>your</em> doctor.</h2>
+      </div>
+      <div>
+        <p>Dr. Khan and the AymanCare team provide board-certified primary care across four Dallas-area locations. Same-day appointments often available.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-primary-care" class="btn btn-ghost">Learn about primary care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: ANNUAL PHYSICAL ============ -->
+<div class="demo-page" id="page-annual-physical">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Annual Physical</span>
+  </div>
+  <span class="overline fade-in">◆ Preventive Care</span>
+  <h2 class="page-title fade-in">What an <em>annual physical</em><br>actually checks.</h2>
+  <p class="page-subtitle fade-in">A walkthrough of every screening we do during your yearly visit — and why each one matters more than you might think.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Blood pressure</em> and cardiovascular health</h3>
+      <p>High blood pressure affects 1 in 3 adults and causes no obvious symptoms — which is why it's called the silent killer. We check it at every visit, but your annual physical is also the time to review your resting heart rate, listen to your heart and lungs, and assess your overall cardiovascular risk based on your full history.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Blood work</em> — cholesterol, glucose, and more</h3>
+      <p>A comprehensive metabolic panel reveals what no exam can see: cholesterol levels, blood glucose, kidney function, liver enzymes, and thyroid levels. These numbers tell us if you're trending toward diabetes, heart disease, or thyroid dysfunction — conditions that are far easier to reverse early than to treat late.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Cancer screenings</em> by age and risk</h3>
+      <p>Depending on your age, sex, and family history, your annual physical triggers the right cancer screenings: colorectal screening starting at 45, breast cancer and cervical cancer screenings, lung cancer screening for smokers, and skin and prostate assessments. We help you understand which ones apply to you and when.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Immunizations</em> and booster review</h3>
+      <p>Vaccines aren't just for children. Adults need boosters for tetanus, shingles, pneumonia, flu, and COVID-19. We review your immunization record each year and make sure you're protected — especially important if you're over 50, immunocompromised, or caring for young children or elderly family members.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Mental health and <em>lifestyle conversation</em></h3>
+      <p>Your annual physical isn't just labs and vitals. We take time to discuss sleep quality, stress levels, physical activity, diet, and mental health. Depression and anxiety screening are part of a complete physical. These conversations often uncover the most important adjustments — ones that no blood panel can detect.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Book your yearly visit</span>
+        <h2>Schedule your <em>annual physical</em> today.</h2>
+      </div>
+      <div>
+        <p>Most insurance plans cover annual wellness exams at no cost to you. Same-day and next-day appointments available at all four AymanCare locations.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-primary-care" class="btn btn-ghost">Learn about primary care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: COLD FLU COVID ============ -->
+<div class="demo-page" id="page-cold-flu-covid">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Cold, Flu, or COVID?</span>
+  </div>
+  <span class="overline fade-in">◆ Seasonal · Urgent Care</span>
+  <h2 class="page-title fade-in">Cold, flu,<br>or <em>COVID?</em></h2>
+  <p class="page-subtitle fade-in">The symptoms overlap more than you'd think. Here's how we tell them apart in the exam room — and when you should come in.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">The <em>common cold</em> — gradual and mostly nasal</h3>
+      <p>Colds come on slowly, over one to three days. Symptoms are concentrated above the neck: runny or stuffy nose, sore throat, mild cough, and occasionally a low-grade fever. Fatigue is mild. Most colds resolve on their own in 7–10 days. The key distinguisher: you probably still feel like yourself, just congested.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Influenza</em> — fast onset, full-body symptoms</h3>
+      <p>The flu hits hard and fast — patients often describe knowing the exact hour they got sick. Hallmarks are high fever (above 101°F), significant muscle aches, chills, headache, and deep fatigue. Respiratory symptoms appear, but the body-wide misery is what distinguishes flu from a cold. Tamiflu is most effective when started within 48 hours of symptom onset.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>COVID-19</em> — a varied presentation</h3>
+      <p>COVID can look like a cold, like the flu, or like neither. Fever, cough, and fatigue are common, but the distinguishing markers were loss of taste and smell, unusual fatigue, and shortness of breath disproportionate to other symptoms. Current strains tend to present more like a mild respiratory illness, but testing is the only way to confirm.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">When to <em>get tested</em></h3>
+      <p>If you have fever plus respiratory symptoms, testing gives you an answer that changes your treatment options. A positive flu test means antivirals can help — but only if started early. A positive COVID test helps you protect those around you. We offer rapid flu and COVID testing with same-day results. You don't need an appointment for a walk-in test.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">When to <em>come in</em> rather than wait</h3>
+      <p>Most viral illnesses resolve without intervention. But come in if you have: a fever above 103°F, difficulty breathing or chest tightness, symptoms that improve then suddenly worsen, severe dehydration, or any symptoms in a child under 3 months. These signs warrant evaluation, not watchful waiting.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Same-day testing available</span>
+        <h2>Rapid flu and <em>COVID testing</em> — walk-ins welcome.</h2>
+      </div>
+      <div>
+        <p>Walk in to any AymanCare location for same-day rapid testing. Results in minutes. Treatment prescriptions on the spot if indicated.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-walk-in" class="btn btn-ghost">Walk-in urgent care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: DALLAS ALLERGY ============ -->
+<div class="demo-page" id="page-dallas-allergy">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Dallas Allergy Season</span>
+  </div>
+  <span class="overline fade-in">◆ Allergy · DFW</span>
+  <h2 class="page-title fade-in">Dallas <em>allergy</em> season,<br>explained.</h2>
+  <p class="page-subtitle fade-in">Cedar, ragweed, oak. What triggers what — and the treatments that actually provide lasting relief.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">The <em>DFW allergy calendar</em></h3>
+      <p>Dallas is one of the most challenging cities in the country for allergy sufferers — and the reason is year-round exposure. Mountain cedar dominates December through March and is among the most potent allergens in North America. Oak and elm follow in spring. Grass pollen peaks in late spring through summer. Ragweed closes out the year from August through November. If it feels like allergy season never ends in Dallas, that's because it essentially doesn't.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Allergies vs. <em>a cold</em> — how to tell them apart</h3>
+      <p>Both cause runny nose, sneezing, and congestion — but the pattern differs. Allergies produce clear, watery discharge and itchy eyes, nose, or throat. They don't cause fever. They persist as long as you're exposed to the trigger. Colds come with thicker mucus, often progress to a sore throat or low-grade fever, and resolve within 10 days. If your symptoms recur every spring or fall, you're dealing with allergies.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Allergy testing</em> — know your triggers</h3>
+      <p>Over-the-counter antihistamines treat symptoms without ever identifying what's causing them. Allergy testing tells us exactly which pollens, molds, or other allergens are driving your reactions. With that information, treatment can be targeted rather than a daily antihistamine that dulls your symptoms — and sometimes your focus. We offer testing and personalized treatment plans at AymanCare.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Medications</em> that work — and when to use them</h3>
+      <p>For mild to moderate allergies: non-drowsy antihistamines (cetirizine, loratadine, fexofenadine) are the first line. Nasal corticosteroid sprays are highly effective for congestion and should be started two weeks before your known trigger season. Decongestants help short-term but shouldn't be used daily. For severe or persistent symptoms, we may recommend nasal antihistamine sprays or combination therapy.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Immunotherapy</em> — the long-term solution</h3>
+      <p>Allergy shots gradually desensitize your immune system to specific allergens over 3–5 years. It's the only treatment that addresses the underlying cause rather than masking symptoms — and results can be permanent. It's particularly worthwhile for patients with severe reactions, asthma triggered by allergies, or those who don't respond well to medications.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Get lasting relief</span>
+        <h2>Stop managing symptoms.<br><em>Treat the cause.</em></h2>
+      </div>
+      <div>
+        <p>AymanCare offers allergy testing and personalized treatment plans across all four Dallas-area locations. Don't just survive allergy season — get ahead of it.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-allergy" class="btn btn-ghost">Allergy treatment ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: WHEN TO BRING CHILD IN ============ -->
+<div class="demo-page" id="page-when-to-bring-child-in">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>When to Bring Your Child In</span>
+  </div>
+  <span class="overline fade-in">◆ Pediatric Care</span>
+  <h2 class="page-title fade-in">When to bring<br>your <em>child in.</em></h2>
+  <p class="page-subtitle fade-in">A parent-friendly guide to the symptoms that need a same-day visit and the ones that can safely wait until morning.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Fever</em> — the thresholds that matter</h3>
+      <p>Fever itself isn't dangerous — it's the immune system doing its job. But the threshold depends on age: any fever in a baby under 3 months warrants immediate evaluation. In children 3–6 months, a fever over 102°F needs same-day attention. In older children, a fever over 104°F or one that persists more than three days should be seen. The number matters, but so does how your child looks and acts.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Breathing</em> — the signs to watch for</h3>
+      <p>Noisy breathing, rapid breathing, flaring nostrils, or visible pulling of the skin between the ribs with each breath are signs of respiratory distress. Croup causes a distinctive barking cough most common in toddlers at night. Wheezing — a high-pitched sound when breathing out — can indicate asthma or bronchiolitis. If your child is working hard to breathe, don't wait.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Ear pain, sore throat, and <em>eye discharge</em></h3>
+      <p>Ear pain in a young child who is tugging at their ear and running a fever is likely an ear infection and should be seen same-day — untreated ear infections can cause hearing complications. A sore throat with white patches or severe difficulty swallowing may be strep and needs a rapid test. Yellow or green eye discharge that crusts overnight is likely bacterial conjunctivitis and needs treatment.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Rashes</em> — which to watch and which to treat</h3>
+      <p>Most rashes in children are viral and resolve without treatment. The ones that need urgent evaluation: a rash that doesn't fade when pressed (petechiae), hives with swelling of the face or lips, a rash that spreads rapidly, or any rash in a child who also has a high fever. Eczema flares, diaper rash, and heat rash can typically wait for a scheduled visit.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Behavioral changes that <em>signal illness</em></h3>
+      <p>Young children can't always describe what hurts. Watch for: a child who is unusually difficult to wake, inconsolably crying for more than two hours, refusing all fluids, or showing no interest in their surroundings. These behavioral shifts often communicate what words can't. When in doubt, we'd rather see your child and send you home reassured than have you wait it out alone.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Child not feeling well?</span>
+        <h2>Same-day pediatric <em>appointments</em> available.</h2>
+      </div>
+      <div>
+        <p>AymanCare sees children of all ages across all four Dallas-area locations. Walk-ins welcome. Board-certified care for your whole family.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-pediatric-care" class="btn btn-ghost">Pediatric care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: SUSTAINABLE WEIGHT LOSS ============ -->
+<div class="demo-page" id="page-sustainable-weight-loss">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Sustainable Weight Loss</span>
+  </div>
+  <span class="overline fade-in">◆ Wellness · Weight Management</span>
+  <h2 class="page-title fade-in">The truth about<br><em>sustainable</em> weight loss.</h2>
+  <p class="page-subtitle fade-in">Why fad diets fail — and what a medically-supervised program actually looks like at AymanCare.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Why <em>fad diets</em> fail</h3>
+      <p>Extremely low-calorie diets trigger metabolic adaptation — your body responds to perceived starvation by slowing its basal metabolic rate. This is why initial weight loss stalls and why most people regain the weight (often more) within a year. Diets that eliminate entire food groups or rely on unsustainable restriction create cycles of deprivation and rebound that make long-term change harder each time.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">The role of <em>hormones</em> and insulin resistance</h3>
+      <p>Weight isn't just a calorie equation. Insulin resistance — common in prediabetes and metabolic syndrome — makes fat storage the body's default mode. Thyroid dysfunction slows metabolism. Cortisol from chronic stress promotes abdominal fat. A physician-led evaluation can identify whether these factors are working against your efforts — and address them directly rather than asking you to work harder against a physiological disadvantage.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">What <em>medical supervision</em> adds</h3>
+      <p>A medically-supervised program begins with bloodwork, metabolic assessment, and a full health history. We identify underlying conditions, prescribe FDA-approved medications when appropriate, and set a caloric and activity target calibrated to your specific physiology — not a generic formula. Regular check-ins provide accountability and allow adjustments as your body responds.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Nutrition</em> principles that actually stick</h3>
+      <p>The most effective eating patterns share a few things: adequate protein (which preserves muscle and increases satiety), minimally processed whole foods, and a moderate caloric deficit you can sustain for months. We don't prescribe rigid meal plans — we help you build habits that fit your life, your culture, and your schedule. Perfection is the enemy of consistency.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Movement</em> without burnout</h3>
+      <p>Exercise is important for weight maintenance and metabolic health — but it's rarely the primary driver of initial weight loss. The most effective strategy is finding movement you'll actually sustain: walking, swimming, cycling, or strength training at a moderate intensity. Starting too intense leads to injury and abandonment; building gradually leads to lasting change.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Physician-guided program</span>
+        <h2>Weight loss that's <em>built to last.</em></h2>
+      </div>
+      <div>
+        <p>AymanCare's weight management program combines medical evaluation, personalized nutrition guidance, and regular physician support. Start with a consultation.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-weight-loss" class="btn btn-ghost">Weight loss program ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: INSURANCE BENEFITS ============ -->
+<div class="demo-page" id="page-insurance-benefits">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Insurance Benefits</span>
+  </div>
+  <span class="overline fade-in">◆ Billing · Insurance</span>
+  <h2 class="page-title fade-in">Understanding your<br><em>insurance</em> benefits.</h2>
+  <p class="page-subtitle fade-in">Copays, deductibles, in-network vs. out-of-network — a plain-English guide from our front-desk team.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Premium, deductible, copay — <em>what's the difference</em></h3>
+      <p>Your premium is what you pay monthly to have insurance, whether or not you use it. Your deductible is what you pay out-of-pocket before your insurance starts covering services. A copay is a fixed amount you pay at each visit, regardless of the deductible. Your out-of-pocket maximum is the most you'll pay in a calendar year — after that, your insurance covers 100%. Understanding which bucket a charge falls into prevents most billing surprises.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>In-network vs. out-of-network</em> — the real cost</h3>
+      <p>In-network providers have a negotiated rate with your insurance company — meaning you pay a fraction of the actual cost. Out-of-network providers bill at their full rate, and your insurance may cover far less or nothing. Always verify your provider is in-network before your visit. AymanCare accepts Medicare, Tricare, Aetna, BlueCross, Cigna, UnitedHealth, Humana, and most major plans.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Preventive care</em> — what's usually free</h3>
+      <p>Under the Affordable Care Act, most insurance plans must cover a set of preventive services at no cost — even before you've met your deductible. This includes annual wellness exams, blood pressure and cholesterol screening, certain cancer screenings, and recommended vaccinations. Knowing what's covered at zero cost removes a major barrier to the care that prevents bigger problems later.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">How to read your <em>Explanation of Benefits</em></h3>
+      <p>Your EOB (Explanation of Benefits) is what your insurance sends after a claim is processed — it's not a bill. It shows what was billed, what your insurer paid, and what you owe. The key column is "patient responsibility." If that number doesn't match your bill from the provider, contact both your insurer and the provider before paying. Billing errors are common and correctable.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Questions to ask</em> before your visit</h3>
+      <p>A few questions prevent most billing surprises: Is this provider in my network? Is this service covered under my plan? Will this visit be billed as preventive or diagnostic? (Preventive is often free; diagnostic counts toward your deductible.) Our front-desk team can verify coverage before your appointment — just call your nearest location.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Insurance questions?</span>
+        <h2>We accept <em>most major</em> insurance plans.</h2>
+      </div>
+      <div>
+        <p>AymanCare accepts Medicare, Tricare, Aetna, BlueCross BlueShield, Cigna, UnitedHealth, Humana, and more. Our team can verify your coverage before your visit.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-contact" class="btn btn-ghost">Contact us ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: ER VS URGENT CARE ============ -->
+<div class="demo-page" id="page-er-vs-urgent-care">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>ER vs. Urgent Care</span>
+  </div>
+  <span class="overline fade-in">◆ Urgent Care</span>
+  <h2 class="page-title fade-in">ER vs. urgent care:<br><em>how to decide.</em></h2>
+  <p class="page-subtitle fade-in">Not everything needs an emergency room — and knowing the difference protects both your health and your wallet.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Go to the <em>ER</em> (or call 911) for these</h3>
+      <p>Some situations require emergency care: chest pain or pressure, difficulty breathing, sudden severe headache unlike any you've had, signs of stroke (facial drooping, arm weakness, slurred speech), severe allergic reaction with throat swelling, uncontrolled bleeding, suspected fractures with deformity, loss of consciousness, or any symptom that feels life-threatening. When in doubt about any of these, go to the ER — speed matters.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Urgent care <em>handles these well</em></h3>
+      <p>Urgent care is designed for conditions that need prompt attention but aren't life-threatening: flu, fever, sore throat, ear infections, UTIs, minor cuts requiring stitches, sprains and minor fractures, skin infections, eye infections, COVID and flu testing, and most acute illnesses. If your primary care doctor is unavailable and you need to be seen today, urgent care is the right call — faster and far less expensive than the ER.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">The <em>cost difference</em> is significant</h3>
+      <p>The average ER visit costs $1,500–$3,000 or more, not including specialist fees. An urgent care visit typically runs $100–$250. For non-emergency conditions that end up in the ER, patients often wait hours to receive care that urgent care could have provided in under an hour at a fraction of the cost. High-deductible insurance plans make this difference even more significant.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Wait times</em> and access</h3>
+      <p>Emergency rooms triage patients by severity — a non-emergency visit can mean a wait of 4–6 hours or more, especially at peak times. Urgent care centers operate on a first-come, first-served basis with typical wait times of 20–60 minutes. Most urgent care centers, including AymanCare, also offer online check-in so you can reduce your wait time before arriving.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">AymanCare <em>walk-in</em> — what to expect</h3>
+      <p>All four AymanCare locations offer walk-in urgent care with no appointment required. We handle the full range of acute illnesses, injuries, and testing needs. Our physicians are board-certified, our labs are on-site, and we can write prescriptions at the visit. For non-emergency situations, we're available evenings and weekends — check the locations page for current hours at the clinic nearest to you.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ No appointment needed</span>
+        <h2>Walk-in urgent care across <em>four locations.</em></h2>
+      </div>
+      <div>
+        <p>AymanCare provides same-day walk-in care at Dallas, North Richland Hills, Mesquite, and Valley Ranch. Board-certified physicians on-site. Labs and prescriptions on the spot.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-walk-in" class="btn btn-ghost">Walk-in urgent care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: FIVE HABITS ============ -->
+<div class="demo-page" id="page-five-habits">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Five Habits That Prevent Illness</span>
+  </div>
+  <span class="overline fade-in">◆ Prevention · Wellness</span>
+  <h2 class="page-title fade-in">Five habits that<br><em>actually</em> prevent illness.</h2>
+  <p class="page-subtitle fade-in">Sleep, hydration, hand-washing, and two more that our physicians recommend to every single patient.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Sleep — <em>7 to 9 hours</em> is non-negotiable</h3>
+      <p>Sleep is when your immune system repairs and strengthens. Studies consistently show that people who get fewer than 6 hours of sleep are significantly more susceptible to viral infection. Sleep deprivation also raises cortisol, impairs blood sugar regulation, and slows wound healing. No supplement replaces it. If you struggle with sleep quality, mention it at your next visit — it's a medical issue, not a willpower issue.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Hydration</em> — more than you think</h3>
+      <p>The general target of 8 cups per day is a starting point — active people and those in Dallas's summer heat need considerably more. Adequate hydration maintains mucosal barriers in the nose and throat (your first line of defense against respiratory viruses), supports kidney function, and keeps blood volume stable. If your urine is darker than pale yellow for most of the day, you're likely under-hydrated.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Hand hygiene</em> — still the most effective</h3>
+      <p>Handwashing remains the single most evidence-backed intervention for preventing the spread of respiratory and gastrointestinal illness. The technique matters: 20 seconds with soap, covering all surfaces including between fingers and under nails. Do it after handling public surfaces, before eating, and after being around someone who is sick. Hand sanitizer at 60%+ alcohol is acceptable when soap isn't available — but not superior to soap and water.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Regular movement</em> — even modest activity helps</h3>
+      <p>You don't need to be an athlete to get immune benefits from exercise. 30 minutes of moderate activity — a brisk walk, a bike ride, a swim — five days a week improves immune surveillance and reduces chronic inflammation, which contributes to nearly every major disease. The key word is regular: consistent moderate activity beats sporadic intense exercise. Start where you are and build.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;"><em>Annual check-ups</em> — catching what you can't feel</h3>
+      <p>The best prevention is catching a problem before it becomes a problem — and most serious conditions develop silently. High blood pressure, elevated cholesterol, prediabetes, thyroid dysfunction, and certain cancers have no symptoms in their early stages. Your annual physical is the one intervention that catches all of them at once. It takes an hour. It could make a decade of difference.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Prevention starts here</span>
+        <h2>Book your annual physical — <em>the best thing</em> you can do.</h2>
+      </div>
+      <div>
+        <p>Most insurance plans cover annual wellness visits at no cost to you. Our physicians take the time to review your habits, screen for hidden risks, and help you build a plan.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-primary-care" class="btn btn-ghost">Primary care ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ BLOG: FOUR CLINICS ============ -->
+<div class="demo-page" id="page-four-clinics">
+<section class="page-hero">
+  <div class="breadcrumbs fade-in">
+    <a href="#page-home">Home</a><span class="sep">✦</span><a href="#page-blog">Blog</a><span class="sep">✦</span><span>Four Clinics, One Standard</span>
+  </div>
+  <span class="overline fade-in">◆ About AymanCare</span>
+  <h2 class="page-title fade-in">Four clinics,<br>one <em>standard of care.</em></h2>
+  <p class="page-subtitle fade-in">A look inside what makes each AymanCare location unique — and the things that stay exactly the same across all four.</p>
+</section>
+<section class="section" style="padding-top: 0; padding-bottom: 100px;">
+  <div style="max-width: 780px; margin: 0 auto; font-size: 16px; color: var(--ink-soft); line-height: 1.8;">
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 01</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Dallas — <em>N Buckner Blvd</em></h3>
+      <p>Our Dallas location on North Buckner Boulevard serves the East Dallas and Lake Highlands communities. It's our original clinic — the one where AymanCare started. It offers the full range of primary care, urgent care, and pediatric services and has deep roots in the surrounding neighborhood. Walk-ins welcome, with same-day appointments typically available.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 02</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">North Richland Hills — <em>serving mid-cities DFW</em></h3>
+      <p>Our North Richland Hills location serves the mid-cities corridor — convenient for families in Hurst, Euless, Bedford, and surrounding communities. It provides the same full suite of services, including primary care, allergy treatment, weight management, and walk-in urgent care. Board-certified care without the hospital system overhead or wait times.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 03</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Mesquite — <em>I-30 East corridor</em></h3>
+      <p>The Mesquite clinic brings AymanCare's approach to the eastern suburbs of Dallas. Mesquite and Balch Springs residents now have access to board-certified primary care and same-day urgent care without traveling into the city. Evening hours make it practical for working families who can't always get to an appointment during the day.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 04</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">Valley Ranch — <em>Irving</em></h3>
+      <p>Our Valley Ranch location in Irving serves the Las Colinas corridor and surrounding communities. It's our newest location and reflects AymanCare's continued investment in bringing patient-centered care to underserved areas of DFW. All the same services, same physicians, same standard — in a part of the metroplex that's growing fast and needed options.</p>
+    </div>
+    <div class="info-card fade-in" style="margin-bottom: 48px;">
+      <div class="l">◆ 05</div>
+      <h3 style="font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 12px; font-weight: 400; line-height: 1.2;">What <em>stays the same</em> across all four</h3>
+      <p>Every AymanCare location is staffed by board-certified physicians, accepts the same insurance plans, and follows the same clinical protocols. You can be seen at any location — your records transfer seamlessly between them. We don't have different tiers of care for different neighborhoods. The standard that earned us a 4.8-star Google rating is the same standard you'll find at every clinic.</p>
+    </div>
+    <div class="neighborhood-band fade-in" style="margin-top: 60px;">
+      <div>
+        <span class="overline" style="color: var(--accent); margin-bottom: 20px; display: block;">✦ Find your nearest clinic</span>
+        <h2>Four locations.<br><em>One team.</em></h2>
+      </div>
+      <div>
+        <p>View hours, directions, and services for all four AymanCare locations across the Dallas-Fort Worth area.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
+          <a href="#page-locations" class="btn btn-ghost">View all locations ↗</a>
         </div>
       </div>
     </div>
