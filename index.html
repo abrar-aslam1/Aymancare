@@ -3882,52 +3882,50 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
 <section class="section" style="padding-top: 0;">
   <div class="contact-grid">
     <div class="form-card fade-in">
-      <h2>Send us a <em>message.</em></h2>
-      <p class="sub">Fill out the form and our team will get back to you. For urgent medical needs, please call or walk in.</p>
+      <h2>Give us a <em>call.</em></h2>
+      <p class="sub">The fastest way to reach us is by phone. Call your nearest location directly — our team will help you schedule or answer any questions.</p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-        <div class="form-fields">
-        <div class="field">
-          <label for="fn">First name</label>
-          <input id="fn" name="first-name" type="text" placeholder="Jane" required>
-        </div>
-        <div class="field">
-          <label for="ln">Last name</label>
-          <input id="ln" name="last-name" type="text" placeholder="Doe" required>
-        </div>
-        <div class="field">
-          <label for="ph">Phone</label>
-          <input id="ph" name="phone" type="tel" placeholder="(214) 555-0123">
-        </div>
-        <div class="field">
-          <label for="em">Email</label>
-          <input id="em" name="email" type="email" placeholder="you@example.com" required>
-        </div>
-        <div class="field full">
-          <label for="loc">Location</label>
-          <select id="loc" name="location">
-            <option value="">Choose a location</option>
-            <option value="Dallas">Dallas</option>
-            <option value="North Richland Hills">North Richland Hills</option>
-            <option value="Mesquite">Mesquite</option>
-            <option value="Valley Ranch">Valley Ranch</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="msg">How can we help?</label>
-          <textarea id="msg" name="message" placeholder="Tell us a bit about what you're looking for..."></textarea>
-        </div>
-        <div class="full" style="margin-top: 10px;">
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 13px;">
-            Send message →
-          </button>
-        </div>
-        </div>
-      </form>
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 28px;">
+        <a href="tel:+12143287400" style="display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--bg-soft); border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: border-color 0.2s;">
+          <div style="width: 40px; height: 40px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 12 19.79 19.79 0 0 1 1.14 3.37 2 2 0 0 1 3.11 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px;">Dallas — N Buckner Blvd</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--blue); letter-spacing: -0.02em;">(214) 328-7400</div>
+          </div>
+        </a>
+        <a href="tel:+18175815959" style="display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--bg-soft); border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: border-color 0.2s;">
+          <div style="width: 40px; height: 40px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 12 19.79 19.79 0 0 1 1.14 3.37 2 2 0 0 1 3.11 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px;">North Richland Hills — Bedford Euless Rd</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--blue); letter-spacing: -0.02em;">(817) 581-5959</div>
+          </div>
+        </a>
+        <a href="tel:+19722889747" style="display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--bg-soft); border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: border-color 0.2s;">
+          <div style="width: 40px; height: 40px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 12 19.79 19.79 0 0 1 1.14 3.37 2 2 0 0 1 3.11 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px;">Mesquite — I-30 E</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--blue); letter-spacing: -0.02em;">(972) 288-9747</div>
+          </div>
+        </a>
+        <a href="tel:+14699137043" style="display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--bg-soft); border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid var(--border); transition: border-color 0.2s;">
+          <div style="width: 40px; height: 40px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 12 19.79 19.79 0 0 1 1.14 3.37 2 2 0 0 1 3.11 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px;">Valley Ranch — MacArthur Blvd, Irving</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--blue); letter-spacing: -0.02em;">(469) 913-7043</div>
+          </div>
+        </a>
+      </div>
+
       <p style="margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);">
-        ✦ For urgent medical needs, please call (972) 288-9747 or walk in.
+        ✦ Walk-ins welcome at all four locations · No appointment needed for urgent care
       </p>
     </div>
 
@@ -4005,20 +4003,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       </div>
 
       <h3><em>04.</em> Your details</h3>
-      <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="booking">
-        <input type="hidden" name="service" value="Primary care">
-        <input type="hidden" name="location" value="Dallas">
-        <input type="hidden" name="time" value="2:15 PM">
-        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-        <div class="form-fields">
-          <div class="field"><label>First name</label><input name="first-name" type="text" required></div>
-          <div class="field"><label>Last name</label><input name="last-name" type="text" required></div>
-          <div class="field"><label>Phone</label><input name="phone" type="tel" required></div>
-          <div class="field"><label>Email</label><input name="email" type="email" required></div>
-          <div class="field full"><label>Reason for visit (optional)</label><textarea name="reason" style="min-height: 80px;"></textarea></div>
-        </div>
-      </form>
+      <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 20px;">Fill in your contact info and any notes on the next step.</p>
     </div>
 
     <div class="summary-card fade-in">
@@ -4046,7 +4031,7 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
         <span class="v" style="font-size: 14px; color: var(--accent);">✓ Most accepted</span>
       </div>
 
-      <button type="button" onclick="document.forms['booking'].submit()">Confirm booking →</button>
+      <button type="button" id="confirm-booking-btn">Confirm booking →</button>
 
       <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15);">
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 10px;">Prefer to call?</div>
@@ -4565,42 +4550,6 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
     </div>
   </div>
 
-  <div class="forms-section fade-in">
-    <div class="forms-section-inner">
-      <div class="forms-header">
-        <span class="overline">◆ New patient paperwork</span>
-        <h2>Download your <em>forms</em> before your visit.</h2>
-        <p>Complete these at home and bring them in — or email the completed forms to <a href="mailto:aymancare2019@gmail.com">aymancare2019@gmail.com</a>.</p>
-      </div>
-      <div class="forms-grid">
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Patient Registration</div>
-            <div class="form-lang">English · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Patient Registration</div>
-            <div class="form-lang">Spanish · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Medical Release Form</div>
-            <div class="form-lang">Authorization to Release Records · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <div class="other-locs-section">
     <span class="overline fade-in" style="margin-bottom: 16px; display: block;">◆ Other locations</span>
     <h2 class="section-title fade-in" style="font-size: clamp(32px, 4vw, 52px);">Four clinics. <em>One</em> team.</h2>
@@ -4760,42 +4709,6 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="#page-book-online" class="btn btn-accent">Book appointment →</a>
         <a href="tel:+14699137043" class="btn btn-ghost">Call (469) 913-7043</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="forms-section fade-in">
-    <div class="forms-section-inner">
-      <div class="forms-header">
-        <span class="overline">◆ New patient paperwork</span>
-        <h2>Download your <em>forms</em> before your visit.</h2>
-        <p>Complete these at home and bring them in — or email the completed forms to <a href="mailto:aymancare2019@gmail.com">aymancare2019@gmail.com</a>.</p>
-      </div>
-      <div class="forms-grid">
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%20101222%29.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Patient Registration</div>
-            <div class="form-lang">English · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Patient%20Registration%20Form%20%28Rev%2092022%29SPANISH.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Patient Registration</div>
-            <div class="form-lang">Spanish · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
-        <a href="https://irp.cdn-website.com/de29bafa/files/uploaded/Authorization%20to%20Release%20Medical%20%20Records%20-%20Aymancare.pdf" target="_blank" rel="noopener" class="pdf-card">
-          <div class="form-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-          <div>
-            <div class="form-name">Medical Release Form</div>
-            <div class="form-lang">Authorization to Release Records · PDF</div>
-          </div>
-          <span class="form-dl">Download ↓</span>
-        </a>
       </div>
     </div>
   </div>
@@ -6658,36 +6571,45 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
   });
 })();
 
-// ---- Booking widget: wire opt tiles to hidden form fields + summary card ----
+// ---- Booking widget: wire opt tiles to summary card, pre-fill book-online form on confirm ----
 (function(){
   var serviceGrid   = document.getElementById('booking-service-grid');
   var locationGrid  = document.getElementById('booking-location-grid');
   var timeGrid      = document.getElementById('booking-time-grid');
-  var fService      = document.querySelector('form[name="booking"] input[name="service"]');
-  var fLocation     = document.querySelector('form[name="booking"] input[name="location"]');
-  var fTime         = document.querySelector('form[name="booking"] input[name="time"]');
   var sumService    = document.getElementById('sum-service');
   var sumLocation   = document.getElementById('sum-location');
   var sumTime       = document.getElementById('sum-time');
+  var confirmBtn    = document.getElementById('confirm-booking-btn');
 
-  function wireGrid(grid, hiddenField, onSelect) {
+  var selected = { service: 'Primary care', location: 'Dallas', time: '2:15 PM' };
+
+  // Map widget service labels to book-online reason dropdown option text
+  var serviceMap = {
+    'Primary care':     'Primary care — annual physical',
+    'Walk-in urgent':   'Walk-in / urgent',
+    'Pediatric visit':  'Pediatric visit',
+    'Something else':   ''
+  };
+
+  function wireGrid(grid, onSelect) {
     if (!grid) return;
     grid.querySelectorAll('.opt').forEach(function(opt) {
       opt.addEventListener('click', function() {
         grid.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected'); });
         opt.classList.add('selected');
         var val = opt.querySelector('h4').textContent.trim();
-        if (hiddenField) hiddenField.value = val;
         if (onSelect) onSelect(val);
       });
     });
   }
 
-  wireGrid(serviceGrid, fService, function(val) {
+  wireGrid(serviceGrid, function(val) {
+    selected.service = val;
     if (sumService) sumService.innerHTML = '<em>' + val + '</em>';
   });
 
-  wireGrid(locationGrid, fLocation, function(val) {
+  wireGrid(locationGrid, function(val) {
+    selected.location = val;
     if (sumLocation) sumLocation.textContent = val;
   });
 
@@ -6696,10 +6618,36 @@ body:has(.demo-page:not(#page-home):target) #page-home { display: none; }
       t.addEventListener('click', function() {
         timeGrid.querySelectorAll('.time').forEach(function(x){ x.classList.remove('selected'); });
         t.classList.add('selected');
-        var val = t.textContent.trim();
-        if (fTime) fTime.value = val;
-        if (sumTime) sumTime.textContent = val;
+        selected.time = t.textContent.trim();
+        if (sumTime) sumTime.textContent = selected.time;
       });
+    });
+  }
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', function() {
+      // Pre-fill the book-online form dropdowns
+      var boForm = document.forms['book-online'];
+      if (boForm) {
+        var locSel = boForm.querySelector('select[name="location"]');
+        var reasonSel = boForm.querySelector('select[name="reason"]');
+        if (locSel) {
+          for (var i = 0; i < locSel.options.length; i++) {
+            if (locSel.options[i].value === selected.location) {
+              locSel.selectedIndex = i; break;
+            }
+          }
+        }
+        if (reasonSel) {
+          var mapped = serviceMap[selected.service] || '';
+          for (var j = 0; j < reasonSel.options.length; j++) {
+            if (reasonSel.options[j].text === mapped) {
+              reasonSel.selectedIndex = j; break;
+            }
+          }
+        }
+      }
+      window.location.hash = '#page-book-online';
     });
   }
 })();
